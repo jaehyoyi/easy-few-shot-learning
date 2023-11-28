@@ -1,4 +1,8 @@
-class ProtoMAML(pl.LightningModule):
+from torch import Tensor, nn
+
+from .few_shot_classifier import FewShotClassifier
+
+class ProtoMAML(FewShotClassifier):
     
     def __init__(self, proto_dim, lr, lr_inner, lr_output, num_inner_steps):
         """
